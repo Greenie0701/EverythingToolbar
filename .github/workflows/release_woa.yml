@@ -2,8 +2,8 @@ name: Publish ARM64 release
 
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - WoA_Support
 
 jobs:
   build-release-arm64:
