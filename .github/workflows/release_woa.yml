@@ -26,7 +26,7 @@ jobs:
         run: echo ${{ secrets.PFX_CERTIFICATE_FILE }} | base64 --decode > ./EverythingToolbar.snk
         
       - name: Build ARM64 release
-        run: MSBuild $Env:GITHUB_WORKSPACE /p:Configuration=Release /p:Platform=ARM64
+        run: MSBuild $Env:GITHUB_WORKSPACE /p:Configuration=Release /p:Platform="Any CPU"
         
       - name: Rename ARM64 msi
         shell: bash
